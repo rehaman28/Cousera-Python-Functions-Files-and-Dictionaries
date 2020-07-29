@@ -17,7 +17,7 @@ def get_pos(x):
     c=0
     words=x.split()
     for word in words:
-        word= strip_punctuation(word)
+        word= strip_punctuation(word).lower()
         if word in positive_words:
             c=c+1
     return c
@@ -26,7 +26,7 @@ def get_neg(x):
     c=0
     words=x.split()
     for word in words:
-        word= strip_punctuation(word)
+        word= strip_punctuation(word).lower()
         if word in negative_words:
             c=c+1
     return c
